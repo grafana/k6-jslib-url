@@ -1,0 +1,7 @@
+.cache/
+public/
+node_modules/
+
+
+# disable formatting for bundle file
+index.js
