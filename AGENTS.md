@@ -1,0 +1,15 @@
+# k6-jslib-url
+
+Polyfill bundle of the URL and URLSearchParams web APIs for k6 scripts.
+
+## Architecture
+
+One source file re-exports two core-js polyfills. A bundler (webpack-like, not present in the repo) was used to produce a committed 33KB minified bundle from it. k6 scripts import the bundle at runtime from jslib.k6.io.
+
+No build pipeline, no package.json, no test suite, no CI. The bundle is a frozen artifact. The source file declares what to pull from core-js; the bundle is the pre-built output.
+
+## Gotchas
+
+- The bundle is a committed artifact. Do not edit it by hand. Do not try to regenerate it -- there are no declared dependencies or build tooling. Reproducing it requires creating a throwaway Node project with core-js and a bundler.
+- ESLint config references React and Airbnb plugins inherited from a template. They are irrelevant. Linting cannot run anyway since no node_modules or package.json exist.
+- Last substantive commit was 2022. This repo is effectively archived in practice but not marked as such.
