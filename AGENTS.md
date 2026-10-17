@@ -13,3 +13,4 @@ No build pipeline, no package.json, no test suite, no CI. The bundle is a frozen
 - The bundle is a committed artifact. Do not edit it by hand. Do not try to regenerate it -- there are no declared dependencies or build tooling. Reproducing it requires creating a throwaway Node project with core-js and a bundler.
 - ESLint config references React and Airbnb plugins inherited from a template. They are irrelevant. Linting cannot run anyway since no node_modules or package.json exist.
 - Last substantive commit was 2022. This repo is effectively archived in practice but not marked as such.
+- Security issues should be reported via [Grafana's security issue reporting page](https://grafana.com/legal/report-a-security-issue/) and not directly in this repository.
